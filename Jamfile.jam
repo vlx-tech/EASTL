@@ -1,0 +1,8 @@
+# EASTL
+
+SubDir TOP external eastl ;
+
+SOURCES += @($(SUBDIR)/source/*.cpp:W) ;
+
+C.IncludeDirectories * : include test/packages/EABase/include/Common ;
+C.Library external-eastl : $(SOURCES) ;
